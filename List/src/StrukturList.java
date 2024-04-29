@@ -65,6 +65,35 @@ public class StrukturList {
         }
     }
 
+    public void removeHead() {
+        if (isEmpty()){
+            System.out.println("List kosong");
+        }
+        else {
+            Node temp = HEAD;
+            HEAD = HEAD.getNext();
+        }
+    }
+
+    public void removeTail() {
+        Node preNode = null;
+        Node lastNode;
+
+        if (HEAD != null) {
+            if (HEAD.getNext() == null) {
+                HEAD = null;
+            }
+            else{
+                lastNode = HEAD;
+                while (lastNode.getNext() != null) {
+                    preNode = lastNode;
+                    lastNode = lastNode.getNext();
+                }
+                preNode.setNext(null);
+            }
+        }
+    }
+
     public void displayElement() {
         Node curNode = HEAD;
         while  (curNode != null) {
