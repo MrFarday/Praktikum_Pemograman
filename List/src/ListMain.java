@@ -6,7 +6,7 @@ public class ListMain {
         list.addHead(5);
         list.addHead(7);
 
-        list.addMid(4, 2);
+        list.addMid(4,4);
 
         list.addTail(2);
         list.addTail(3);
@@ -16,6 +16,8 @@ public class ListMain {
         list.removeHead();
 
         list.removeTail();
+
+        list.removeMid(0);
 
         System.out.println("Elemen: ");
         list.displayElement();
