@@ -129,6 +129,37 @@ public class StrukturList {
         }
     }
 
+    public boolean find(int x){
+        Node curNode;
+        Boolean ketemu;
+
+        curNode = HEAD;
+        ketemu = false;
+
+        while (curNode != null && !ketemu) {
+            if (curNode.getData() == x) {
+                ketemu = true;
+            }
+            else{
+                curNode = curNode.getNext();
+            }
+        }return ketemu;
+    }
+
+    public int size(){
+        Node curNode;
+        int jumlah;
+
+        curNode = HEAD;
+        jumlah = 0;
+
+        while (curNode != null) {
+            jumlah = jumlah + 1;
+            curNode = curNode.getNext();
+        }
+        return jumlah;
+    }
+
     public void displayElement() {
         Node curNode = HEAD;
         while  (curNode != null) {

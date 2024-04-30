@@ -2,6 +2,11 @@ public class ListMain {
     
     public static void main(String[] args) {
         StrukturList list = new StrukturList();
+        System.out.println("Elemen : ");
+        System.out.println("Find   : " + list.find(9));
+        System.out.println("Size   : " + list.size());
+        System.out.println("-------------------------");
+
         list.addHead(1);
         list.addHead(5);
         list.addHead(7);
@@ -14,12 +19,15 @@ public class ListMain {
         list.addTail(9);
 
         list.removeHead();
-
+        
         list.removeTail();
-
+        
         list.removeMid(0);
-
-        System.out.println("Elemen: ");
+        
+        System.out.print("Elemen : ");
         list.displayElement();
+        System.out.println();
+        System.out.println("Find   : " + list.find(9));
+        System.out.println("Size   : " + list.size());
     }
 }
